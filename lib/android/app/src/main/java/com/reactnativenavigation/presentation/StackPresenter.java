@@ -166,7 +166,7 @@ public class StackPresenter {
     }
 
     private void applyTopBarOptions(TopBarOptions options, AnimationsOptions animationOptions, Component component, Options componentOptions) {
-        topBar.setHeight(options.height.get(UiUtils.getTopBarHeightDp(activity)));
+        topBar.setHeight(options.height.get(LayoutParams.WRAP_CONTENT));
         topBar.setElevation(options.elevation.get(DEFAULT_ELEVATION));
         if (topBar.getLayoutParams() instanceof MarginLayoutParams) {
             ((MarginLayoutParams) topBar.getLayoutParams()).topMargin = UiUtils.dpToPx(activity, options.topMargin.get(0));
